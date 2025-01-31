@@ -21,7 +21,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 10px;
   justify-content: center;
-  padding-top: 5%;
 }
 
 .card {
@@ -69,15 +68,24 @@ body {
   }
 
   .card, .back, .front {
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
   }
 }
 
 @media (max-width: 480px) {
+  body {
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     gap: 5px;
+    width: 100vw;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 
   .card, .back, .front {
