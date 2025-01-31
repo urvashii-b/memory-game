@@ -14,42 +14,31 @@ body {
   padding-top: 5%;
 }
 
-
 .grid {
   max-width: 960px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  justify-content: center;
+  padding-top: 5%;
 }
 
 .card {
   position: relative;
-  -webkit-transition: all .4s linear;
-  -o-transition: all .4s linear;
-  transition: all .4s linear;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  transition: all 0.4s linear;
+  transform-style: preserve-3d;
   margin: 5px;
 }
 
-.card,
-.back,
-.front {
+.card, .back, .front {
   height: 150px;
   width: 150px;
 }
 
-.back,
-.front {
+.back, .front {
   position: absolute;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .front {
@@ -57,8 +46,7 @@ body {
 }
 
 .back {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
   background-color: white;
   background-size: contain;
   background-repeat: no-repeat;
@@ -66,10 +54,34 @@ body {
 }
 
 .selected {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .match .front {
   background: white !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 8px;
+  }
+
+  .card, .back, .front {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 5px;
+  }
+
+  .card, .back, .front {
+    height: 80px;
+    width: 80px;
+  }
 }
