@@ -93,3 +93,31 @@ body {
     width: 80px;
   }
 }
+
+.name {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#playerName {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+#startGame {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#startGame:hover {
+  background-color: #0056b3;
+}
