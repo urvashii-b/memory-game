@@ -124,4 +124,3 @@ document.getElementById('soloBtn').addEventListener('click', () => {
   isMultiplayer = false;
   document.getElementById('scoreBoard').style.display = 'none';
 });
-

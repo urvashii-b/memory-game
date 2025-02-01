@@ -1,28 +1,28 @@
-</html>
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
-  <title>Memory</title>
-
+  <title>Memory Game</title>
   <link rel="stylesheet" href="css/style.prefix.css">
   <link rel="icon" type="image/png" href="img/favicon.webp">
-
 </head>
-
 <body>
+  <div class="name">
+    <input type="text" id="playerName" placeholder="Enter your name" />
+    <button id="startGame">Start Game</button>
+  </div>
   <div class="begin">
     <h1>Remember Tokyo Revengers?</h1>
     <h3>Play the memory game to find out</h3>
   </div>
-  <br>
   <div id="game"></div>
+  <div id="leaderboard">
+    <h2>Leaderboard</h2>
+    <div id="leaderboardList"></div>
+  </div>
 
   <script src="js/script.babel.js"></script>
 </body>
-
 </html>
